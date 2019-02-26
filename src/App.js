@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 const Input = ({
-  name, 
+  name,
   type,
   value,
   onChange
@@ -45,17 +45,25 @@ class App extends Component {
   constructor() {
     super();
     this.state = { 
-      text: '', 
+      firstName: '',
+      lastName: '', 
       mail: '',
       password: ''};
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+    this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
 
-  handleInputChange(e) {
+  handleFirstNameChange(e) {
     this.setState({
-      text: e.target.value,
+      firstName: e.target.value,
+    });
+  }
+
+  handleLastNameChange(e) {
+    this.setState({
+      lastName: e.target.value,
     });
   }
 
@@ -80,15 +88,25 @@ class App extends Component {
       <h1>Submit your Form:</h1>
       <form>
         <label>
-          Full Name
+          First Name
           <Input 
-          name="Insert your full name:"
+          name="Insert your first name:"
           type="text"
-          value={this.state.text}
-          onChange={this.handleInputChange}
+          value={this.state.firstName}
+          onChange={this.handleFirstNameChange}
           />
         </label>
         <br /> 
+        <label>
+          Last Name
+          <Input 
+          name="Insert your last name:"
+          type="text"
+          value={this.state.lastName}
+          onChange={this.handleLastNameChange}
+          />
+        </label>
+        <br />
         <label>
           E-Mail
           <Input 
