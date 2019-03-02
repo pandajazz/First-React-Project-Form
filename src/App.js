@@ -53,6 +53,7 @@ class App extends Component {
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleFirstNameChange(e) {
@@ -79,6 +80,28 @@ class App extends Component {
     })
 
   }
+
+ /* handleSubmit(e) {
+    e.preventDefault();
+    const data = new FormData(e.target);
+
+    fetch('/api/form-submit-url', {
+      method: 'POST',
+      body: data,
+    });
+
+    console.log(data);
+  }
+  */
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.firstName)
+    console.log(this.state.lastName)
+    console.log(this.state.mail)
+    console.log(this.state.password)
+
+  }
    
   
   render() {
@@ -86,7 +109,7 @@ class App extends Component {
     return (
     <div>
       <h1>Submit your Form:</h1>
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>
           First Name
           <Input 
