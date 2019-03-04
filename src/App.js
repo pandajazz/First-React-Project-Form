@@ -28,19 +28,6 @@ const Button = ({
   )
 }
 
-
-const onSubmit = () => {
-  alert("Thanks for submitting our form!");
-  
-} 
-
-const onCancel = () => {
-  alert("See you soon! :)")
-}
-
-
-
-
 class App extends Component {
   constructor() {
     super();
@@ -49,67 +36,57 @@ class App extends Component {
       lastName: '', 
       mail: '',
       password: ''};
-    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
-    this.handleLastNameChange = this.handleLastNameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    
+    this.baseState = this.state;
+
+  
   }
 
-  handleFirstNameChange(e) {
+
+  handleFirstNameChange = (e) => {
     this.setState({
       firstName: e.target.value,
     });
   }
 
-  handleLastNameChange(e) {
+  handleLastNameChange = (e) => {
     this.setState({
       lastName: e.target.value,
     });
   }
 
-  handleEmailChange(e) {
+  handleEmailChange = (e) =>  {
     this.setState({
       mail: e.target.value,
     });
   }
 
-  handlePasswordChange(e) {
+  handlePasswordChange = (e) => {
     this.setState({
       password: e.target.value,
-    })
-
-  }
-
- /* handleSubmit(e) {
-    e.preventDefault();
-    const data = new FormData(e.target);
-
-    fetch('/api/form-submit-url', {
-      method: 'POST',
-      body: data,
     });
-
-    console.log(data);
   }
-  */
 
-  handleSubmit(e) {
-    e.preventDefault();
+
+  handleSubmit = (e) => {
+    e.preventDefault();    
     console.log(this.state.firstName)
     console.log(this.state.lastName)
     console.log(this.state.mail)
     console.log(this.state.password)
-
+    
   }
-   
-  
+
+  handleResetForm = () => {
+    this.setState(this.baseState);
+  }
+
   render() {
     
     return (
     <div>
       <h1>Submit your Form:</h1>
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <label>
           First Name
           <Input 
@@ -152,11 +129,11 @@ class App extends Component {
         <br />
         <Button 
           name="Submit"
-          onClick={onSubmit}
+          onClick={this.handleSubmit}
         />
         <Button 
           name="Cancel"
-          onClick={onCancel}
+          onClick={this.handleResetForm}
         />
       </form>
     </div>
