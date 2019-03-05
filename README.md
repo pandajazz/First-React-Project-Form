@@ -4,7 +4,7 @@ First project working on forms with React.
 
 ## Home page
 
-![alt text] (public/images/homepage.png)
+![alt text](public/images/homepage.png)
 
 ## Objectives of exercise
 
