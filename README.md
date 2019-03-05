@@ -1,6 +1,6 @@
 # React Forms
 
-First project working on forms with React.
+First React project working with forms.
 
 ## Home page
 
