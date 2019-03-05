@@ -18,6 +18,7 @@ Getting confident at using React for building UI, focusing on Forms: 4 input fie
 - Manage and update the initial state with setState()
 - Handle events (Change - Submit - Reset) and bind them with arrow functions
 - Collect all the data (Submit/handleSubmit) and reset to the initial state (Cancel/handleReset)
+- Add some basic style with CSS
 
 
 
