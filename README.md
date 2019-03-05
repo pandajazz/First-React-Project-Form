@@ -8,7 +8,17 @@ First project working on forms with React.
 
 ## Objectives of exercise
 
+Getting confident at using React for building UI, focusing on Forms: 4 input fields, collecting data (first name, last name, e-mail and password), and 2 buttons with different functionalities (Submit and Cancel).
+
 ## Main challenges that I've faced
+
+- Create stateless functional components (Input and Button): assigning props (name, type, value, onChange, onClick) with destructuring.
+- Create stateful class component (App) receiving props from the stateless components and managing its internal state: 
+* adding an initial state to the constructor
+* updating the state after the first setup with setState()
+* colletting all the states (Submit/handleSubmit) and resetting to the initial state (Cancel/handleReset)
+- Handle events and bind them with arrow functions
+
 
 
 
