@@ -14,9 +14,9 @@ Getting confident at using React for building UI, focusing on Forms: 4 input fie
 
 - Create stateless functional components (Input and Button): assigning props (name, type, value, onChange, onClick) with destructuring.
 - Create stateful class component (App) receiving props from the stateless components and managing its internal state: 
-* adding an initial state to the constructor
-* updating the state after the first setup with setState()
-* colletting all the states (Submit/handleSubmit) and resetting to the initial state (Cancel/handleReset)
+a. adding an initial state to the constructor
+b. updating the state after the first setup with setState()
+c. colletting all the states (Submit/handleSubmit) and resetting to the initial state (Cancel/handleReset)
 - Handle events and bind them with arrow functions
 
 
